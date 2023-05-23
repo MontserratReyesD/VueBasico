@@ -17,10 +17,16 @@
             },
             methods: {
                 //Definimoa los diferentes metodos o funciones que vamos a utilizar
+                increment() {
+                    this.counter++;
+                },
                 submit() {
                     this.counter++;
                 }
             }, 
+            //Evento click
+            //template: '<button v-on:click="increment" >{{ counter }} </button>'
+            //Usando submit
             template: '<form v-on:submit.prevent="submit"><button >{{ counter }} </button></form>'
         }).mount("#app");
         console.log(vm);
