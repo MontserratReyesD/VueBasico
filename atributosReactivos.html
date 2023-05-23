@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 1</title>
+    <title>Clase 3</title>
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <div id="app">{{ text }} </div>
+    <div id="app">   </div>
     <script>
         //Creamos la aplicaccion y la montamos
         const vm = Vue.createApp({
             data() {
                 return {
-                    text: "Hola vue"
+                    //Agregamos la variable y le pasamos la url de la imagen
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc2twCGFXmhp5r9uXlMXXGxiBL0kTWGz2ODw&usqp=CAU"
                 };
             },
+            template: '<img v-bind:src="img" v-bind:alt="img" />'
         }).mount("#app");
         console.log(vm);
     </script>
